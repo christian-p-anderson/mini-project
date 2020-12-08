@@ -10,10 +10,10 @@ public class ZodiacCalculation {
                 System.out.println("You were born in " + bDayYear + ", the year of the Ox (niu). You're decisive, honest, dependable and hardworking!");
                 break;
             case "0.5":
-                System.out.println("You were born in " + bDayYear + ", the year of the Tiger (hu). You're brave, competitive, unpredictable, and self-confident!");
+                System.out.println("You were born in " + bDayYear + ", the year of the Tiger (hu). You're brave, competitive, unpredictable and self-confident!");
                 break;
             case ("0.583"):
-                System.out.println("You were born in " + bDayYear + ", the year of the Rabbit (tu). You're gentle, quiet, elegant, alert, quick, skillful, kind, and patient!");
+                System.out.println("You were born in " + bDayYear + ", the year of the Rabbit (tu). You're gentle, quiet, elegant, alert, quick, skillful, kind and patient!");
                 break;
             case ("0.667"):
                 System.out.println("You were born in " + bDayYear + ", the year of the Dragon (long). You're confident, intelligent, ambitious, persevering and hardworking!");
