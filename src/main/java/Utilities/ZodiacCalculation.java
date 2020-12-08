@@ -1,3 +1,5 @@
+package Utilities;
+
 public class ZodiacCalculation {
     public static void answer(String bDayYearNum, String bDayYear) {
         switch(bDayYearNum) {
@@ -19,7 +21,7 @@ public class ZodiacCalculation {
             case ("0.75"):
                 System.out.println("You were born in " + bDayYear + ", the year of the Snake (she). You're intelligent, courageous, confident, insightful and communicative!");
                 break;
-            case ("0.883"):
+            case ("0.833"):
                 System.out.println("You were born in " + bDayYear + ", the year of the Horse (ma). You're animated, kind, straightforward, active and energetic!");
                 break;
             case ("0.917"):
