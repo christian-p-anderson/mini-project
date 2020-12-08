@@ -1,7 +1,7 @@
 package Utilities;
 
 public class ZodiacCalculation {
-    public static void answer(String bDayYearNum, String bDayYear) {
+    public void answer(String bDayYearNum, String bDayYear) {
         switch(bDayYearNum) {
             case "0.333":
                 System.out.println("You were born in " + bDayYear + ", the year of the Rat (shu). You're quick-witted, resourceful and versatile!");

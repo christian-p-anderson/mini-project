@@ -1,9 +1,11 @@
+package Utilities;
+
 public class DealWithDecades {
     /**
      * Base calculation done for period 1968 - 1979. Every decade beyond or after decreases and increases
      * respectively by 1. To get the num value to match the base period, the following algorithm was utilized.
      */
-    static Double getADouble(Double num) {
+    public Double getADouble(Double num) {
         if (num > 1 && num < 2) {
             num -= 1;
         } else if (num > 2 && num < 3) {
