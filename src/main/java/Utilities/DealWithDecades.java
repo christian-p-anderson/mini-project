@@ -22,6 +22,8 @@ public class DealWithDecades {
             num = Math.abs(num + 3);
         } else if (num < -4 && num > -5) {
             num = Math.abs(num + 4);
+        } else {
+            num = Math.abs(num);
         }
         return num;
     }
