@@ -1,9 +1,7 @@
 package Utilities;
 
-import java.io.InputStream;
-
 public class ZodiacCalculation {
-    public InputStream answer(String bDayYearNum, String bDayYear) {
+    public static void answer(String bDayYearNum, String bDayYear) {
         switch(bDayYearNum) {
             case "0.333":
                 System.out.println("You were born in " + bDayYear + ", the year of the Rat (shu). You're quick-witted, resourceful and versatile!");
@@ -45,6 +43,5 @@ public class ZodiacCalculation {
                 System.out.println("Error in your input...please re-enter the year of your birth.");
                 break;
         }
-        return null;
     }
 }

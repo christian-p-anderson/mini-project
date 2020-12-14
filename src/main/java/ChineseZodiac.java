@@ -1,24 +1,40 @@
-import Utilities.DealWithDecades;
-import Utilities.ZodiacCalculation;
-import java.text.DecimalFormat;
+import Menus.MainMenu;
+import Utilities.Console;
+import Utilities.PrintDelays;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ChineseZodiac {
-    private ZodiacCalculation zodiacCalculation;
-    private DealWithDecades dealWithDecades;
-    public ChineseZodiac() {
-        this.zodiacCalculation = new ZodiacCalculation();
-        this.dealWithDecades = new DealWithDecades();
-    }
+    MainMenu mainMenu = new MainMenu();
+    PrintDelays printDelays = new PrintDelays();
+    Engine engine = new Engine();
     public void run() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("\nTo get your Chinese zodiac sign, please enter the four-digit year of your birth -> ");
-        double birthYearInput = input.nextDouble();
-        Double num = (birthYearInput / 12) - 164;
-        Double birthYearConversion = dealWithDecades.getADouble(num);
-        DecimalFormat df = new DecimalFormat("#.###");
-        String bDayYearNum = df.format(birthYearConversion);
-        String bDayYear = df.format(birthYearInput);
-        zodiacCalculation.answer(bDayYearNum, bDayYear);
+        Scanner scan = new Scanner(System.in);
+        boolean power = true;
+        while (power) {
+            mainMenu.run();
+            int input = Console.getIntegerInput("Enter your choice here: ");
+            try {
+                switch (input) {
+                    case 1:
+                        engine.run();
+                        break;
+                    case 2:
+                        printDelays.delay0();
+                        power = false;
+                        System.out.println("\nTurning off. Please come back again!\n");
+                        printDelays.delay0();
+                        break;
+                    default:
+                        Console.print("\nPlease make an appropriate selection" + "\n");
+                        printDelays.delay0();
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                scan.next();
+                System.out.println("\n" + "Please choose option that's on the menu");
+            }
+        }
     }
 }
