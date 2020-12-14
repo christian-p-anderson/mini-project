@@ -40,7 +40,7 @@ public class ZodiacCalculation {
                 System.out.println("You were born in " + bDayYear + ", the year of the Pig (zhu). You're diligent, compassionate, generous, easy-going and gentle!");
                 break;
             default:
-                System.out.println("Error in your input...please re-enter the year of your birth.");
+                System.out.println("Error in your input...Please select a year between 1909 - 2020");
                 break;
         }
     }
