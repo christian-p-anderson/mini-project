@@ -33,7 +33,7 @@ public class ChineseZodiac {
             } catch (InputMismatchException e) {
                 Scanner scan = new Scanner(System.in);
                 scan.next();
-                System.out.println("\n" + "Please choose option that's on the menu");
+                Console.println("\n" + "Please choose option that's on the menu");
             }
         }
     }
