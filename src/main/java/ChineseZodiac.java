@@ -10,7 +10,6 @@ public class ChineseZodiac {
     PrintDelays printDelays = new PrintDelays();
     Engine engine = new Engine();
     public void run() {
-        Scanner scan = new Scanner(System.in);
         boolean power = true;
         while (power) {
             mainMenu.run();
@@ -32,6 +31,7 @@ public class ChineseZodiac {
                         break;
                 }
             } catch (InputMismatchException e) {
+                Scanner scan = new Scanner(System.in);
                 scan.next();
                 System.out.println("\n" + "Please choose option that's on the menu");
             }
