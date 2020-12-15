@@ -12,9 +12,9 @@ public class ChineseZodiac {
     public void run() {
         boolean power = true;
         while (power) {
+            try {
             mainMenu.run();
             int input = Console.getIntegerInput("Enter your choice here: ");
-            try {
                 switch (input) {
                     case 1:
                         engine.run();
@@ -31,8 +31,6 @@ public class ChineseZodiac {
                         break;
                 }
             } catch (InputMismatchException e) {
-                Scanner scan = new Scanner(System.in);
-                scan.next();
                 Console.println("\n" + "Please choose option that's on the menu");
             }
         }
