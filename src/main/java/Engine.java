@@ -15,13 +15,13 @@ public class Engine {
         printDelays.delay1();
         findSignMenu.run();
         Double input1 = (double) 0;
-        String mode = Console.getStringInput("Please make your selection: ");
+        String mode = Console.getStringInput("\nEnter your selection here: ");
         printDelays.delay1();
         boolean powerOn = true;
         while (powerOn) {
             if(mode.equals("1")) {
-                input1 = Console.getDoubleInput("Please provide your four-digit year of birth: ");
-                Double num = (input1 / 12) -164;
+                input1 = Console.getDoubleInput("\nPlease provide your four-digit year of birth: ");
+                Double num = (input1 / 12) - 164;
                 Double birthYearConversion = dealWithDecades.getADouble(num);
                 DecimalFormat df = new DecimalFormat("#.###");
                 String bDayYearNum = df.format(birthYearConversion);

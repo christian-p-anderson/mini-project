@@ -14,7 +14,7 @@ public class DealWithDecades {
             num -=3;
         } else if (num > 4 && num < 5) {
             num -= 4;
-        }else if (num < -1 && num > -2) {
+        } else if (num <= -1 && num > -2) {
             num = Math.abs(num + 1); // Math.abs() deals with negative values
         } else if (num < -2 && num > -3) {
             num = Math.abs(num + 2);
