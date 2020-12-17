@@ -14,17 +14,17 @@ public class Engine {
         printDelays.delay1();
         Double birthYear;
         findZodiacMenu.run();
-        String mode = Console.getStringInput("\nEnter your selection here: ");
+        Integer mode = Console.getIntegerInput("\nEnter your selection here: ");
         printDelays.delay1();
         boolean powerOn = true;
         while (powerOn) {
-            if(mode.equals("1")) {
+            if (mode == 1) {
                 birthYear = getBirthYear.returnBirthYear();
                 Double num = (1997 - birthYear) % 12;
                 zodiacSign.answer(num, birthYear);
                 printDelays.delay2();
                 break;
-            } else if (mode.equals("2")) {
+            } else if (mode == 2) {
                 powerOn = false;
                 printDelays.delay0();
                 break;
