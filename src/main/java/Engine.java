@@ -4,8 +4,6 @@ import Utilities.GetBirthYear;
 import Utilities.ZodiacSign;
 import Utilities.PrintDelays;
 
-import java.util.Scanner;
-
 public class Engine {
     PrintDelays printDelays = new PrintDelays();
     FindZodiacMenu findZodiacMenu = new FindZodiacMenu();
@@ -24,7 +22,6 @@ public class Engine {
                 birthYear = getBirthYear.returnBirthYear();
                 Double num = (1997 - birthYear) % 12;
                 zodiacSign.answer(num, birthYear);
-                Console.print("\n");
                 printDelays.delay2();
                 break;
             } else if (mode.equals("2")) {
