@@ -31,7 +31,7 @@ public class ChineseZodiac {
                         break;
                 }
             } catch (InputMismatchException e) {
-                Console.println("\n" + "Please choose option that's on the menu");
+                Console.println("\n" + "Please choose an option that's on the menu");
             }
         }
     }

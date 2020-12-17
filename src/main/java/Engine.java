@@ -1,32 +1,27 @@
-import Menus.FindSignMenu;
+import Menus.FindZodiacMenu;
 import Utilities.Console;
-import Utilities.DealWithDecades;
+import Utilities.ZodiacSign;
 import Utilities.PrintDelays;
-import Utilities.ZodiacCalculation;
 
-import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class Engine {
     PrintDelays printDelays = new PrintDelays();
-    FindSignMenu findSignMenu = new FindSignMenu();
-    DealWithDecades dealWithDecades = new DealWithDecades();
+    FindZodiacMenu findZodiacMenu = new FindZodiacMenu();
+    ZodiacSign zodiacSign = new ZodiacSign();
 
     public void run() {
         printDelays.delay1();
-        findSignMenu.run();
-        Double input1 = (double) 0;
+        findZodiacMenu.run();
+        Double birthYear;
         String mode = Console.getStringInput("\nEnter your selection here: ");
         printDelays.delay1();
         boolean powerOn = true;
         while (powerOn) {
             if(mode.equals("1")) {
-                input1 = Console.getDoubleInput("\nPlease provide your four-digit year of birth: ");
-                Double num = (input1 / 12) - 164;
-                Double birthYearConversion = dealWithDecades.getADouble(num);
-                DecimalFormat df = new DecimalFormat("#.###");
-                String bDayYearNum = df.format(birthYearConversion);
-                String bDayYear = df.format(input1);
-                ZodiacCalculation.answer(bDayYearNum, bDayYear);
+                birthYear = getBirthYear();
+                Double num = (1997 - birthYear) % 12;
+                zodiacSign.answer(num, birthYear);
                 Console.print("\n");
                 printDelays.delay2();
                 break;
@@ -39,5 +34,20 @@ public class Engine {
                 break;
             }
         }
+    }
+
+    private Double getBirthYear() {
+        Double birthYear;
+        while(true) {
+            Scanner scanner = new Scanner(System.in);
+            Console.print("\nPlease provide your four-digit year of birth:\n");
+            try {
+                birthYear = Double.parseDouble(scanner.next());
+                break;
+            } catch (NumberFormatException ignore) {
+                Console.print("Invalid input. Please try again\n");
+            }
+        }
+        return birthYear;
     }
 }

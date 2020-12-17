@@ -2,7 +2,7 @@ package Menus;
 
 import Utilities.Console;
 
-public class FindSignMenu {
+public class FindZodiacMenu {
     public void run() {
         Console.print("\nChinese Zodiac Options\n" +
                 "1 - Enter your year of birth to get your Chinese zodiac sign\n" +
